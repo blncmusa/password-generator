@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/38c8211dcc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header-divider">Password Generator</div>
+    </header>
+
+    <section class="container">
+    <section id="generated-password">
+       <input type="text" name="password" id="password" placeholder="Password" readonly>
+       <i class="fa-regular fa-copy"></i>
+    </section>
+
+    <section id="password-generator">
+        <div class="character-length">
+            <p>Character Length</p>
+            <p id="digital-number">0</p>
+        </div>
+        <div id="slider">
+            <input type="range" min="1" max="100" value="50" name="slider" id="slider">
+        </div>
+        <!-- CHECKBOXES -->
+        <div class="checkboxes">
+            <div class="uppercase checkbox">
+                <input type="checkbox" name="uppercase" id="uppercase" checked>
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+            <div class="lowercase checkbox">
+                <input type="checkbox" name="lowercase" id="lowercase" checked>
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+            <div class="numbers checkbox">
+                <input type="checkbox" name="Numbers" id="Numbers" checked>
+                <label for="Numbers">Include Numbers</label>
+            </div>
+            <div class="uppercase checkbox">
+                <input type="checkbox" name="Symbols" id="Symbols" checked>
+                <label for="Symbols">Include Symbols</label>
+            </div>
+        </div>
+        <!-- // CHECKBOXES -->
+        <div id="strength-box">
+            <p id="strength-text">STRENGTH</p>
+            <div class="strength-meter">
+                <p>MEDIUM</p>
+                <div class="bars-wrapper">
+                    <div class="bar bar-one active"></div>
+                    <div class="bar bar-two active"></div>
+                    <div class="bar bar-three"></div>
+                    <div class="bar bar-four"></div>
+                </div>
+            </div>
+        </div>
+        <button type="submit">GENERATE <i class="fa-solid fa-arrow-right"></i></button>
+    </section>
+</section>
+
+    <script src="myscripts.js"></script> 
+</body>
+</html>

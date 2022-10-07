@@ -1,0 +1,209 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Orbitron:wght@700&display=swap');
+/* global variables */
+:root {
+    --background: #0b0d14;
+    --blackish: #333333;
+    --greenish: #66b3ff;
+    --meter-tab: #1a1f29;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Gemunu Libre', sans-serif;
+    background: var(--background);
+    color: #fff;
+}
+
+header {
+    display: flex;
+    width: 25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-divider {
+    font-size: 1.2rem;
+    caret-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 12px;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0.1em;
+    /* color: var(--greenish); */
+    opacity: 90%;
+}
+
+.header-divider::before,.header-divider::after {
+    content: '';
+    height: 2px;
+    background-color: var(--greenish);
+    flex-grow: 1;
+    opacity: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 30rem;
+    /* background: var(--blackish); */
+    border-radius: 20px;
+    position: relative;
+}
+
+#generated-password {
+    background: var(--blackish);
+    width: 100%;
+    height: 4rem;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#password {
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 15px;
+    caret-color: transparent;
+    position: relative;
+}
+
+#digital-number {
+    color: var(--greenish);
+    position: absolute;
+    font-size: 20px;
+    right: 40px;
+
+}
+
+#password-generator {
+    display: flex;
+    flex-direction: column;
+    background: var(--blackish);
+    width: 100%;
+    height: 15rem;
+    flex: 7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    position: relative;
+}
+
+#slider {
+    position: absolute;
+    top: 30px;
+    right: 18px;
+    width: 90%;
+    accent-color: var(--greenish);
+    border-radius: 5px;
+}
+
+.fa-regular {
+    color: var(--greenish);
+    cursor: pointer;
+    caret-color: transparent;
+}
+
+.character-length {
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+    caret-color: transparent;
+    cursor: default;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100px;
+    gap: 20px;
+    margin-left: 70px;
+    margin-top: -90px;
+    margin-bottom: -10px;
+    caret-color: transparent;
+    accent-color: var(--greenish);
+}
+
+#strength-box {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 30px;
+    position: relative;
+    background-color: var(--meter-tab);
+    padding: 5px;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: -10px;
+    caret-color: transparent;
+    cursor: default;
+}
+
+#strength-text {
+    font-size: 12px;
+    margin-left: 20px;
+    opacity: 40%;
+}
+
+.strength-meter p {
+    position: absolute;
+    right: 95px;
+    top: -3px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button {
+    width: 82%;
+    background: var(--greenish);
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -70px;
+    cursor: pointer;
+}
+
+.bars-wrapper {
+    display: flex;
+    width: 200px;
+    gap: 5px;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.bar {
+    height: 20px;
+    width: 10px;
+    border:1px solid var(--greenish); 
+}
+
+.bar.active {
+    height: 20px;
+    width: 10px;
+    background-color: var(--greenish); 
+}
